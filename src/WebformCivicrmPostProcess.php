@@ -822,9 +822,6 @@ class WebformCivicrmPostProcess extends WebformCivicrmBase implements WebformCiv
    */
   private function saveContactLocation($contact, $cid, $c) {
     $utils = \Drupal::service('webform_civicrm.utils');
-    // Check which location_type_id is to be set as is_primary=1;
-    $is_primary_address_location_type = wf_crm_aval($contact, 'address:1:location_type_id');
-    $is_primary_email_location_type = wf_crm_aval($contact, 'email:1:location_type_id');
 
     foreach ($utils->wf_crm_location_fields() as $location) {
       if (!empty($contact[$location])) {
