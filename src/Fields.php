@@ -845,6 +845,10 @@ class Fields implements FieldsInterface {
           'type' => 'textarea',
         ];
         if (isset($sets['contribution'])) {
+          $fields['participant_note'] = [
+            'name' => t('Participant Count'),
+            'type' => 'textfield',
+          ];
           $fields['participant_fee_amount'] = [
               'name' => t('Participant Fee'),
             ] + $moneyDefaults;

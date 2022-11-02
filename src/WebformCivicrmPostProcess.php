@@ -1196,7 +1196,7 @@ class WebformCivicrmPostProcess extends WebformCivicrmBase implements WebformCiv
                   if (empty($item['participant_id'])) {
                     $item['participant_id'] = $item['entity_id'] = $result['id'];
                   }
-                  $item['participant_count'] = wf_crm_aval($item, 'participant_count', 0) + 1;
+                  $item['participant_count'] = wf_crm_aval($item, 'participant_count', 0) + (int) ($params['count'] ?? 1);
                   break;
                 }
               }

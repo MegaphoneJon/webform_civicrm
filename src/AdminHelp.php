@@ -166,6 +166,13 @@ class AdminHelp implements AdminHelpInterface {
       '</p>';
   }
 
+  protected function participant_count() {
+    return '<p>' .
+      t('Number of participants. ') .
+      t('By default, every event registrant counts as one participant when calculating capacity for an event. Use this field to make the count configurable.') .
+      t('For instance, you can expose this field to allow a registrant to purchase multiple tickets to an event.') .
+      '</p>';
+  }
   protected function participant_fee_amount() {
     return '<p>' .
       t('Price for this event. If multiple events or participants are registered with this field, the amount will be multiplied per-person, per-event.') .
